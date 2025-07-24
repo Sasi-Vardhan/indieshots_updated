@@ -38,7 +38,7 @@ RUN apk add --no-cache dumb-init
 COPY package*.json ./
 
 # Install only production dependencies
-RUN npm ci --only=production --legacy-peer-deps && \
+RUN npm install --omit=dev --legacy-peer-deps && \
     npm cache clean --force
 
 # Copy built application and required directories
