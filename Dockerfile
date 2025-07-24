@@ -24,7 +24,7 @@ RUN npx esbuild server/index.production.ts \
     --packages=external \
     --bundle \
     --format=esm \
-    --outfile=dist/server.js
+    --outfile=dist/index.js
 
 # Production stage
 FROM node:20-alpine AS production
